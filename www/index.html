@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Jogo</title>
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+        <link href="css/ionic.app.css" rel="stylesheet">-->
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
+        <script src="lib/zepto/zepto.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/jogo.js"></script>
+
+    </head>
+    <body ng-app="starter">
+        <ion-pane>
+            <ion-header-bar class="bar-stable bar-balanced">
+                <h1 class="title">Finde me if you can!</h1>
+            </ion-header-bar>
+            <ion-content>
+                <img id="baixo_1" src="img/baixo_1.bmp" hidden="hidden">
+                <img id="baixo_2" src="img/baixo_2.bmp" hidden="hidden">
+                <img id="cima_1" src="img/cima_1.bmp" hidden="hidden">
+                <img id="cima_2" src="img/cima_2.bmp" hidden="hidden">
+                <img id="direita_andando" src="img/direita_andando.bmp" hidden="hidden">
+                <img id="direita_parado" src="img/direita_parado.bmp" hidden="hidden">
+                <img id="esquerda_andando" src="img/esquerda_andando.bmp" hidden="hidden">
+                <img id="esquerda_parado" src="img/esquerda_parado.bmp" hidden="hidden">
+                <img id="fundo" src="img/fundo.jpg" hidden="hidden">
+                <img id="grass" src="img/grass.png" hidden="hidden">
+                <img id="house" src="img/house.png" hidden="hidden">
+                <img id="gary" src="img/gary.png" hidden="hidden">
+
+                <!-- deixar o canvas para manipular os personagens -->
+                <div class="row col-100">
+                    <canvas id="canvas" height="300">
+                        Navegador não suporta HTML5
+                    </canvas>
+                </div>
+
+                <!-- caixa de mensagem -->
+                <div class="list" >
+                    <a class="item item-icon-left" href="#">
+                        <i class="icon ion-chatbubble-working"></i>
+                        <span class="">
+                          Grammy
+                        </span>
+                    </a>
+                </div>
+
+                <!-- botoes de movimento -->
+                <div class="col-center">
+                    <div class="row">
+                        <button class="button icon"></button>
+                        <button id="btn-up" class="button icon ion-arrow-up-a button-positive"></button>
+                        <button class="button icon"></button>
+                    </div>
+                    <div class="row">
+                        <button id="btn-left" class="button icon ion-arrow-left-a button-positive"></button>
+                        <button class="button icon"></button>
+                        <button id="btn-right" class="button icon ion-arrow-right-a button-positive"></button>
+                    </div>
+                    <div class="row">
+                        <button class="button icon"></button>
+                        <button id="btn-down" class="button icon ion-arrow-down-a button-positive"></button>
+                        <button class="button icon"></button>
+                    </div>
+                </div>
+                
+            </ion-content>
+        </ion-pane>
+    </body>
+</html>
